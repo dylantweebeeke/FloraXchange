@@ -5,11 +5,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import View from './components/view';
+import ProductOverView from './components/productOverview';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <View />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

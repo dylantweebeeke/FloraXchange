@@ -1,26 +1,23 @@
 import * as React from 'react';
 import { Component } from 'react';
+import { BrowserRouter, Link, Route, RouteComponentProps, Switch, withRouter } from 'react-router-dom';
 import Navigation from './navigation';
 import Product from './product';
 import ProductOverView from './productOverview';
+import Home from './productOverview'
 
-export interface ViewProps {
-    
-}
  
-export interface ViewState {
-    
-}
- 
-class View extends React.Component<ViewProps, ViewState> {
+class View extends React.Component<RouteComponentProps<any>> {
     render() { 
-        return (
-            <div>  
+        return(
+            <div>
                 <Navigation />
-                <ProductOverView />
+                <Switch>
+                    <Route path={'/'} exact component={ProductOverView} />
+                </Switch>
             </div>
         );
     }
 }
  
-export default View;
+export default withRouter(View);
