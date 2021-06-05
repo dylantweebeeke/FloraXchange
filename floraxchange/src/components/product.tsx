@@ -25,6 +25,16 @@ class Product extends React.Component<ProductProps, ProductState> {
                                 </div>
                             </div>
                         </a>
+                        <div className="block-body text-center">
+                            <h3 className="heading heading-5 strong-600 text-capitalize">
+                                <a href="#">
+                                    Tulpen
+                                </a>
+                            </h3>
+                            <p className="product-description">
+                                Super mooie tulpen 
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

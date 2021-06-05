@@ -11,7 +11,7 @@ export interface NavigationState {
  
 class Navigation extends React.Component<NavigationProps, NavigationState> {
     render() { 
-        return ( 
+        return (  
             <nav className="navbar navbar-dark navigation">
                 <span className="navbar-brand mb-0 h1">FloralXchange</span>
             </nav>
