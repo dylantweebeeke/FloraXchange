@@ -41,7 +41,7 @@ class ViewProduct extends React.Component<RouteComponentProps<any>, IFormState> 
             <div className="container">
                 {this.state.product && 
                 <div>
-                    <h2>{}</h2>
+                    <h2>{this.state.product.Naam}</h2>
                     <p>Potmaat: {this.state.product.Potmaat}</p> 
                     <p>Hoogte: {this.state.product.Hoogte}</p>
                 </div>
