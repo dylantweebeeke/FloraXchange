@@ -5,13 +5,19 @@ import Product from './product';
 import axios from 'axios';
 
 interface  IState{
-    products: any[];
+    products: any[],
+    inputValueSize: number
 }
+
  
 class ProductOverView extends React.Component<RouteComponentProps, IState > {
+
     constructor(props: RouteComponentProps){
         super(props);
-        this.state = {products: []}
+        this.state = {
+            products: [],
+            inputValueSize: 100
+        }
     }
 
     public componentDidMount(): void{
@@ -22,11 +28,29 @@ class ProductOverView extends React.Component<RouteComponentProps, IState > {
         })
     }
 
+    filterOnChangeSize = (event:any) => {
+        this.setState({
+            inputValueSize: event.target.value
+        });
+        
+    }
+    
     render() { 
         const products = this.state.products;
 
+        const filteredProductsSize =
+        this.state.products.filter(product => {
+            return product.PotmaatNumeriek <= this.state.inputValueSize
+        })
+
         return ( 
             <div className="container">
+                <header>
+                    <div className="wrapper-text">
+                    <h1 className="text-center text-header">Onze producten:</h1>
+                    </div>
+                </header>
+                <p>Zoeken op potmaat: <input type="number" className="input" placeholder="Kleiner dan" onChange={this.filterOnChangeSize}/></p>
                 {products.length === 0 &&(
                     <div className="text-center">
                         <h2>Er zijn momenteel geen producten beschrikbaar</h2>
@@ -34,11 +58,11 @@ class ProductOverView extends React.Component<RouteComponentProps, IState > {
                 )}
                 <div className="products-default products-cards products-tech">
                     <div className="row">
-                        {products && products.map(product => 
+                        {products && filteredProductsSize.map(product => 
                             <div key={product.ID} className="col-md-6">
                                 <div className="block product no-border z-depth-2-top z-depth-2--hover">
                                     <div className="block-image">
-                                        <a href="#">
+                                    <Link to={`viewProduct/ID=${product.ID}`}>
                                             <div className="wrapper">
                                                 <img src={product.Fotos[0].UrlThumb600} alt="productImage"/>
                                             <div className="textBlock">
@@ -47,7 +71,7 @@ class ProductOverView extends React.Component<RouteComponentProps, IState > {
                                                 </div>
                                             </div>
                                         </div>
-                                        </a>
+                                        </Link>
                                         <div className="block-body text-center">
                                         <h3 className="heading heading-5 strong-600 text-capitalize">
                                             <Link to={`viewProduct/ID=${product.ID}`}>
