@@ -5,6 +5,7 @@ import Navigation from './navigation';
 import Product from './product';
 import ProductOverView from './productOverview';
 import Home from './productOverview'
+import viewProduct from './viewProduct';
 
  
 class View extends React.Component<RouteComponentProps<any>> {
@@ -14,6 +15,7 @@ class View extends React.Component<RouteComponentProps<any>> {
                 <Navigation />
                 <Switch>
                     <Route path={'/'} exact component={ProductOverView} />
+                    <Route path={'/viewProduct/:ID'} exact component={viewProduct} />
                 </Switch>
             </div>
         );
