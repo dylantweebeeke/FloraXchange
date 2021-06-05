@@ -35,7 +35,7 @@ class ProductOverView extends React.Component<RouteComponentProps, IState > {
                 <div className="products-default products-cards products-tech">
                     <div className="row">
                         {products && products.map(product => 
-                            <div className="col-md-6">
+                            <div key={product.ID} className="col-md-6">
                                 <div className="block product no-border z-depth-2-top z-depth-2--hover">
                                     <div className="block-image">
                                         <a href="#">
@@ -50,9 +50,9 @@ class ProductOverView extends React.Component<RouteComponentProps, IState > {
                                         </a>
                                         <div className="block-body text-center">
                                         <h3 className="heading heading-5 strong-600 text-capitalize">
-                                            <a href="#">
+                                            <Link to={`viewProduct/ID=${product.ID}`}>
                                                 {product.Naam}
-                                            </a>
+                                            </Link>
                                         </h3>
                                         <p className="product-description">
                                             Potmaat: {product.Potmaat} <br></br>
