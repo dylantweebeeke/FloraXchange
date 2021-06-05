@@ -1,3 +1,4 @@
+/*React genereated CSS---------------------------------------------------------------------------------------*/
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,105 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/*Navigation styles--------------------------------------------------------------------------------------*/
+.navigation{
+  padding: 10px;
+}
+
+.navbar{
+  background-color:#196031;
+  color: #808A7C;
+}
+
+.navigation{
+  padding: 10px;
+}
+
+.navbar{
+  background-color:#196031;
+  color: #808A7C;
+}
+
+/*Product styles--------------------------------------------------------------------------------------*/
+.product{
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.block .block-body {
+  padding: 1.5rem 1.5rem;
+}
+
+.block .block-body .heading > a{
+  text-decoration: none;
+}
+
+.block .block-body>p {
+  margin-bottom: 0
+}
+
+.wrapper{
+  position: relative;
+  width: 100%;
+}
+
+.block .block-image img {
+  max-width: 100%;
+  border-bottom: 1px solid #196031 ;
+  border-radius: 10px;
+  transition: .5s ease;
+  opacity: 1;
+  display: block;
+  backface-visibility: hidden;
+}
+
+.textBlock{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #196031;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.wrapper:hover .textBlock{
+  opacity: 1;
+}
+
+.wrapper:hover  img{
+  opacity: 0.3;
+}
+
+.z-depth-2-top, .z-depth-2-top--hover:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.strong-600 {
+  font-weight: 600 !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.heading-5 {
+  font-size: 1.125rem !important;
+}
+
+.heading {
+  margin: 0 0 6px;
+  padding: 0;
+  text-transform: none;
+  font-family: "Nunito",sans-serif;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.46;
 }
