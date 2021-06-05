@@ -1,6 +1,15 @@
 # FloraXchange
 Opdracht voor JEM-id assesment
 
+# Comments:
+Ik had hiervoor nog nooit met TypeScript of React gewerkt. Ik heb voor ik begon met de opdracht begon aardig wat tutorials gekeken en documentaties gelezen.
+Ik ben erachter gekomen dat ik React een hele fijne taal vind om websites mee te bouwen. Dit ga ik in de toekomst zeker vaker doen!
+ Ik heb aan de opdracht gewerkt op Zaterdag 5 Juni van 13.00 22.00 uur.
+Tijdens het maken van de opdracht heb ik veel dingen opgezocht en geprobeerd aan de praat te krijgen omdat ik deze taal verder dus niet echt ken. Hierom zijn er vast nog verbeter punten aan mn code. een aantal dingen die ik zou doen als ik meer de tijd zou nemen:
+-kijken of ik de opmaak nog wat mooier kan maken.
+-bij de details van een product laat ik nu handmatig informatie zien. Dit is niet zo handig en kan beter dynamisch. Dit zou ik doen door de lijst heen te loopen en op deze manier de informatie te laten zien die ik nodig heb. Dit omdat ik in de JSON file al zag dat alle waardes een bijbehorende naam hebben.
+-Ik zou meer kijken naar responsiveness van de website. Hier heb ik nu niet al te veel naar gekeken. Ik heb wel Bootstrap gebruikt dus het meeste zal aardig responsive zijn.
+
 # De opdracht:
 JEM-id front-end assessment
 Scenario
